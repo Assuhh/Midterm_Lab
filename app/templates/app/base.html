@@ -4,34 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Acesuu</title>
-    <link rel="icon" href="{% static 'images/Acefavicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}"
-          <div class="context">
+    <link href="{% static 'images/Acefavicon.ico' %}" rel="icon">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <div class="context">
     </div>
-
-<div class="area" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 
 </head>
 <body>
- {% include 'app/navbar.html' %}
-
+{% include 'app/navbar.html' %}
 {% block content %}
 
 {% endblock content %}
 <script src="{% static 'js/base.js' %}"></script>
 </body>
 </html>
-
