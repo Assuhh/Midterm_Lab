@@ -2,10 +2,10 @@
 {% load static %}
 {% block content %}
 
-      <div class="post-entry">
-        <h1> <a href="">{{post.title}}</a> </h1>
-        <p>{{post.body}}</p>
+      <div class="appointment-entry">
+        <h1> <a href="">{{appointment.firstname}}{{appointment.lastname}}</a> </h1>
+        <p>{{appointment.body}}</p>
       </div>
-      <a href="{% url 'blog_update' post.pk %}">+ Edit Blog</a>
-      <a href="{% url 'blog_delete' post.pk %}">- Delete Blog</a>
+      <a href="{% url 'blog_update' object.pk %}">+ Edit Appointment</a>
+      <a href="{% url 'blog_delete' object.pk %}">- Delete Appointment</a>
 {% endblock content %}

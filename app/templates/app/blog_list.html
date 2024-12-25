@@ -1,13 +1,13 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
- <a href="{% url 'blog_create' %}">+ New Blog Post</a>
+ <a href="{% url 'blog_create' %}">+ New Appointment</a>
 <div class="nav-right">
 </div>
-   {% for post in posts %}
-      <div class="post-entry">
-        <h1> <a href ="{% url 'blog_detail' post.pk %}">{{post.title}}</a> </h1>
-
+   {% for appointment in appointment%}
+      <div class="appointment-entry">
+        <h1> <a href ="{% url 'blog_detail' appointment.pk %}">{{appointment.firstname}} {{appointment.lastname}}</a> </h1>
+          <p> {{appointment.body}}</p>
       </div>
   {% endfor %}
 {% endblock content %}

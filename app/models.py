@@ -1,12 +1,16 @@
 from django.db import models
 from django.urls import reverse
-class Post(models.Model):
-    title = models.CharField(max_length=100)
-    author = models.ForeignKey("auth.User", on_delete=models.CASCADE)
-    body = models.TextField()
+
+class Appointment(models.Model):
+    user = models.CharField(max_length=100)
+    firstname = models.CharField(max_length=50)
+    lastname = models.CharField(max_length=50)
+    email = models.EmailField(unique=True)
+    address = models.CharField(max_length=100)
+    contact_number = models.DecimalField(max_digits=10, decimal_places=1)
 
     def __str__(self):
-        return self.title
+        return self.Appointment_name
 
     def get_absolute_url(self):
         return reverse("blog_detail", kwargs={"pk": self.pk})

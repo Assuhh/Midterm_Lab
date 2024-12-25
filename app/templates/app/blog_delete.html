@@ -4,7 +4,8 @@
    <h1>Edit Post</h1>
    <form action="{% url 'blog_delete' object.pk %}" method="post">
        {% csrf_token %}
-       <p> Are you sure you want to delete "{{post.title}}"?</p>
+       {{form.as_p}}
+       <p> Are you sure you want to delete "{{appointment.firstname}}{{appointment.lastname}}"?</p>
        <input type="submit" value="Confirm">
    </form>
 
